@@ -18,7 +18,7 @@ $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
 // Ejecutar una consulta SQL para validar el usuario
-$sql = "SELECT * FROM persona WHERE usuario = ? AND password = ?";
+$sql = "SELECT * FROM persona WHERE email_user = ? AND password = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('ss', $usuario, $password);
 $stmt->execute();
